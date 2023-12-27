@@ -1,0 +1,33 @@
+.product {
+	
+	
+	.card {
+		background-color: #e2eafd;
+		margin: 15px;
+		width: 10em;
+		border: 1px solid #0033ff;
+
+		img {
+			width: auto;
+			margin: 2px;
+			border: 1px solid rgb(194, 194, 194);
+		}
+
+		.btn {
+			width: 100%;
+			background-color: transparent;
+			color: #005e83;
+			border-color: #005e83;
+			border-radius: 50px;
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: #0098d3 !important;
+				border-color: #0098d3;
+				color: white;
+				box-shadow: none !important;
+			}
+		}
+	}
+}

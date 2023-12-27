@@ -1,0 +1,157 @@
+.cart {
+	
+	svg {
+		width: 30px;
+		fill: white;
+	}
+}
+
+.cart-content {
+	box-shadow: -1px 2px 2px 0px rgba(0,0,0,0.75);
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #343a40 !important;
+	height: 100vh;
+	text-align: left;
+	white-space: nowrap;
+	transition: width 1s;
+	z-index: 9;
+	border-top-left-radius: 0.5em;
+	border-bottom-left-radius: 0.5em;
+
+	.cart-content__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px;
+		border-bottom: 1px solid #4f5256;
+		height: 54px;
+
+		h3 {
+			font-size: 25px;
+			padding-top: 4px;
+		}
+
+		.close-icon {
+			width: 24px;
+			fill: white;
+			
+			&:hover {
+				cursor: pointer;
+				border: 1px solid gray;
+				border-radius: 50%;
+			}
+		}
+
+		button {
+			color: white;
+			display: flex;
+			gap: 0.5em;
+			padding: 6px;
+			text-decoration: none;
+			
+			&:hover {				
+				border: 1px solid gray;
+			}
+		}
+	}
+
+	.cart-content__products {
+		height: calc(100vh - 76px - 89px);
+		overflow-y: auto;
+	}
+
+	.cart-content__product {
+		display: flex;
+		align-items: center;
+		padding: 12px;
+		border: 1px solid #4f5256;
+		margin: 2px;
+		border-radius: 0.8em;
+		background-color: #202020;
+
+		img {
+			width: 100px;
+			margin-right: 10px;
+			border-radius: 3px;
+		}
+
+		.cart-content__product-info {
+			color: white;
+			width: 100%;
+
+			h3 {
+				font-size: 18px;
+			}
+
+			p {
+				font-size: 16px;
+				
+			}
+
+			> div {				
+				display: flex;
+				justify-content: start;
+				align-items: center;
+				border-top: 1px solid #4f5256;
+				padding-top: 7px;
+				
+
+				button {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 1.5em;					
+					height: 1.5em;
+					color: white;
+					background-color: #0098d3;
+					margin: auto 4px;
+					border-radius:8px;
+					border: 1px solid gray;
+					font-size: 24px;
+					padding-bottom: 5px;
+
+					&:active {
+						background-color: #00648c;
+					}
+
+					&:last-of-type {
+						margin-right: 6px;
+					}
+				}
+			}
+			
+		}
+	}
+
+	.cart-content__footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		border-top: 1px solid #4f5256;
+		padding: 11px;
+
+		> div {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			color: white;
+
+			p {
+				&:last-of-type {
+					font-weight: bold;
+					font-size: 20px;
+				}
+			}
+		}
+
+		button {
+			background-color: #0098d3;
+			width: 100%;
+			border: 0;
+			font-size: 20px;
+		}
+	}
+}
