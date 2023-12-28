@@ -1,5 +1,6 @@
 .cart {
-	
+	border: 1px solid gray;
+
 	svg {
 		width: 30px;
 		fill: white;
@@ -7,7 +8,7 @@
 }
 
 .cart-content {
-	box-shadow: -1px 2px 2px 0px rgba(0,0,0,0.75);
+	box-shadow: 0 4px 4px 0px rgba(0,0,0,0.75);
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -33,17 +34,11 @@
 			padding-top: 4px;
 		}
 
-		.close-icon {
-			width: 24px;
-			fill: white;
-			
-			&:hover {
-				cursor: pointer;
-				border: 1px solid gray;
-				border-radius: 50%;
-			}
+		.hide-icon {
+			width: 20px;
+			height: 20px;
 		}
-
+			
 		button {
 			color: white;
 			display: flex;
@@ -53,6 +48,10 @@
 			
 			&:hover {				
 				border: 1px solid gray;
+			}
+
+			&:first-of-type {
+				border-radius: 50%;
 			}
 		}
 	}
@@ -114,9 +113,8 @@
 					background-color: #0098d3;
 					margin: auto 4px;
 					border-radius:8px;
-					border: 1px solid gray;
 					font-size: 24px;
-					padding-bottom: 5px;
+					padding-bottom: 10px;
 
 					&:active {
 						background-color: #00648c;
