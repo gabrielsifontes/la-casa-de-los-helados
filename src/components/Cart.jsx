@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
-import CloseIcon from "@mui/icons-material/Close"
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import { BASE_PATH, STORAGE_SHOPPING_CART } from '../utils/contants';
 import {countDuplicatedItemsArray, removeArrayDuplicates, removeItemArray} from "../utils/arrayFunctions"
@@ -64,14 +64,12 @@ export default function Cart({
 
 	function openCart() {
 		set_isCartOpen(true)
-
-		// document.body.style.overflowY = "hidden"
 	}	
 
 	function closeCart() {
 		set_isCartOpen(false)
-
 		document.body.style.overflowY = "scroll"
+		document.body.style.overflowX = "hidden"
 	}
 
 	function emptyProductsInCart() {
@@ -130,10 +128,15 @@ export default function Cart({
 				<div 
 					className='cart-content__header'
 				>
-					<CloseIcon 
-						className='close-icon'
-						onClick={closeCart}
-					/>
+					<Button
+						variant="link"
+						onClick={closeCart}						
+					>
+						<ArrowForwardIosIcon 
+							className='hide-icon'
+						/>
+
+					</Button>
 
 					<h3>Carrito</h3>
 
@@ -209,16 +212,16 @@ function Product({
 								<p>${element.price.toFixed(2)} / unidad</p>
 
 								<div>
-									<button 
+									<Button 
 										onClick={()=> increaseQuantity(element.id)}
 									>
 										+
-									</button>
-									<button
+									</Button>
+									<Button
 										onClick={()=> decreaseQuantity(element.id)}
 									>
 										-
-									</button>
+									</Button>
 									<span>
 										En carrito: {quantity} {quantity > 1 ? "unidades" : "unidad"}
 									</span>

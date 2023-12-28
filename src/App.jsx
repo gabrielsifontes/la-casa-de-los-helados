@@ -16,19 +16,26 @@ import { STORAGE_SHOPPING_CART } from './utils/contants'
 // Proyecto terminado en 2023-12-27 por Gabriel Sifontes Serrano
 
 
-function App() {
+function App() {  
+  // CARGAR AL INICIO
   const productsResultFetch = useFetch(urlApiProducts)
   const { loading, result, error } = productsResultFetch
 
 
+  
+  // ESTADOS
   const [idsInCart, set_idsInCart] = useState([])
-
-
+  
+  
+  // EFECTOS DE INICIO
   useEffect(function() {
+    document.body.style.overflowX = "hidden"
     getProductsCart()
   }, [])
 
 
+
+  // FUNCIONES
   function addProductCart(id, name) {
     const temp_idsInCart = idsInCart // por referencia
     temp_idsInCart.push(id)
@@ -56,6 +63,7 @@ function App() {
 
 
 
+  // RENDERIZAR
   return (
     <div className='App'>
       <TopMenu
