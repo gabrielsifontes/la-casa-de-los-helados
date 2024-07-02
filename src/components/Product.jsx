@@ -1,4 +1,5 @@
 import { Col, Card, Button } from "react-bootstrap"
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 
 import "./Product.scss"
@@ -31,6 +32,7 @@ export default function Product({
 
 					<Button 
 						onClick={()=> {addProductCart(id, name)}}>
+						<AddShoppingCartIcon></AddShoppingCartIcon>
 						Añadir
 					</Button>
 				</Card.Body>

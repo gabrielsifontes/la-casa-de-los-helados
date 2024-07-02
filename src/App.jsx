@@ -9,8 +9,7 @@ import Product from './components/Product'
 
 import './App.css'
 import useFetch from './hooks/useFetch'
-import { urlApiProducts } from "./utils/contants"
-import { STORAGE_SHOPPING_CART } from './utils/contants'
+import { urlApiProducts, STORAGE_SHOPPING_CART } from "./utils/contants"
 
 
 // Proyecto terminado en 2023-12-27 por Gabriel Sifontes Serrano

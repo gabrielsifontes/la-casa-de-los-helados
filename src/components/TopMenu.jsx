@@ -31,6 +31,7 @@ function BrandNav() { /* Navegación de marca */
       <img  className="logo" src={LogoUrl} alt="" />
 
       <h2>La casa de los helados</h2>
+      {/* <h2>LA CASA DE LOS HELADOS</h2> */}
 
     </Navbar.Brand>
   )

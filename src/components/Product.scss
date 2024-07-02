@@ -14,11 +14,15 @@
 		}
 
 		.btn {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
 			width: 100%;
 			background-color: transparent;
 			color: #005e83;
 			border-color: #005e83;
 			border-radius: 50px;
+			gap: 0.2em;
 
 			&:hover,
 			&:active,
